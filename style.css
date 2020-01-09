@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('images/bg-top.svg'), url('images/bg-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: top right, bottom left;
+    background-color: #f6f6fe;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+h2, h3 {
+    text-align: center;
+    margin: 30px 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+hr {
+    margin: 10px;
+}
+
+button {
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    margin: 15px 25px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #a3a8f0 0%, #696fdd 51%, #696fdd 100%);
+}
+
+.btn.invert {
+    background: white;
+    color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+button:hover {
+    background: white;
+    color: black;
+    transition: all 0.4s;
+}
+
+.btn.invert:hover {
+    color: white;
+    background-image: linear-gradient(to right, #a3a8f0 0%, #696fdd 51%, #696fdd 100%);
+    transition: all 0.4s;
+}
+
+.price {
+    margin: 30px 0;
+    font-weight: 2100;
+    font-size: 26px;
+}
+
+.monthly {
+    display: none;
+}
+
+.toggle-button {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.attribution {
+    margin: 40px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+/* Define flex container */
+.row {
+    display: flex;
+    width: 900px;
+    justify-content: center;
+}
+
+/* Float columns side by side */
+.column {
+    width: 300px;
+    padding: 0;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+.card.invert {
+    background-color: #6666cc;
+    color: white;
+    padding-bottom: 25px;
+}
+
+
+/* Hide default input */
+.toggle input {
+    display: none;
+  }
+  
+  /* The container and background */
+  .toggle {
+    position: relative;
+    display: inline-block;
+    width: 68px;
+    height: 30px;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #6666cc;
+    border: 1px solid #aaa;
+    border-radius: 30px;
+    transition: all 0.4s;
+  }
+
+  
+  /* The sliding button */
+  .slider:before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    left: 2px;
+    top: 2px;
+    background-color: #eee;
+    border-radius: 24px;
+    transition: all 0.4s;
+  }
+  
+  /* On checked */
+  input:checked + .slider {
+    background-color: #6666cc;
+  }
+  input:checked + .slider:before {
+    transform: translateX(37px);
+  }
+
+  /* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 400px) {
+    .row {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px 0;
+    }
+
+    .column {
+        padding: 10px;
+    }
+  }
