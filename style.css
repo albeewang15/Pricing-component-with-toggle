@@ -93,6 +93,7 @@ button:hover {
 .column {
     width: 300px;
     padding: 0;
+    position: relative;
 }
 
 /* Clear floats after the columns */
@@ -114,7 +115,10 @@ button:hover {
 .card.invert {
     background-color: #6666cc;
     color: white;
-    padding-bottom: 25px;
+    position: absolute;
+    height: 110%;
+    width: 100%;
+    top: -1rem;
 }
 
 
@@ -166,7 +170,7 @@ button:hover {
   }
 
   /* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
     .row {
       width: 100%;
       flex-direction: column;
@@ -177,4 +181,10 @@ button:hover {
     .column {
         padding: 10px;
     }
+
+    .card.invert {
+      position: relative;
+      margin-top: 40px;
+    }
   }
+
